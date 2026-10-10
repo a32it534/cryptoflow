@@ -120,10 +120,10 @@ https://docs.ccxt.com/
 
 https://github.com/a32it534/cryptoflow
 
-ساختار فایل‌ها ممکن است با نسخه پروژه متفاوت باشد. نمونه‌ای از ساختار مورد انتظار:
+ساختار فایل‌ها :
 
 ```text
-cryptoflow/
+
 ├── main_app.py
 ├── requirements.txt
 ├── README.md
