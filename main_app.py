@@ -370,7 +370,7 @@ HTML_CODE = r"""
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نبض بازار</title>
+<title>نبض بازار کریپتو</title>
 <script>
 (function () {
     var t = 'dark';
@@ -543,7 +543,7 @@ td.t-up { color: var(--up); font-weight: 600; } td.t-down { color: var(--down); 
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
             </div>
             <div>
-                <div class="brand-name">نبض بازار</div>
+               <div class="brand-name">نبض بازار کریپتو</div>
                 <div class="brand-note">دریافت مستقیم داده از صرافی‌ها</div>
             </div>
         </div>
@@ -1033,7 +1033,7 @@ class MarketDataAPI:
 if __name__ == "__main__":
     api = MarketDataAPI()
     webview.create_window(
-        title="نبض بازار - دریافت و تحلیل داده‌های صرافی‌ها",
+        title="نبض بازار کریپتو - دریافت و تحلیل داده‌های صرافی‌ها",
         html=HTML_CODE,
         js_api=api,
         width=1280,
