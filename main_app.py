@@ -191,7 +191,6 @@ def calculate_macd(closes, fast=12, slow=26, signal=9):
         signal
     )
 
-
     padding_length = len(closes) - len(valid_signal_values)
     signal_line = (
         [None] * padding_length
@@ -219,8 +218,6 @@ def calculate_ichimoku(highs, lows, closes):
     kijun = []
 
     for i in range(len(closes)):
-
-
         if i < 8:
             tenkan.append(None)
         else:
@@ -232,7 +229,6 @@ def calculate_ichimoku(highs, lows, closes):
             ) / 2
 
             tenkan.append(round(tenkan_value, 12))
-
 
         if i < 25:
             kijun.append(None)
@@ -300,7 +296,6 @@ def fetch_market_data(symbol, timeframe, limit=50, exchange_id="bingx"):
         if symbol not in exchange.markets:
             raise DataFetchError(f"نماد {symbol} در {exchange_name} پیدا نشد.")
 
-
         fetch_limit = min(limit + 60, MAX_CANDLES + 60)
         raw_ohlcv = exchange.fetch_ohlcv(symbol, timeframe=timeframe, limit=fetch_limit)
 
@@ -315,7 +310,6 @@ def fetch_market_data(symbol, timeframe, limit=50, exchange_id="bingx"):
 
     if not raw_ohlcv:
         raise DataFetchError(f"برای {symbol} در {exchange_name} داده‌ای دریافت نشد.")
-
 
     by_time = {}
     for candle in raw_ohlcv:
@@ -587,8 +581,8 @@ td.t-up { color: var(--up); font-weight: 600; } td.t-down { color: var(--down); 
 
         <div class="field">
             <label for="limit">تعداد کندل</label>
-            <input type="number" id="limit" value="50" min="10" max="500" inputmode="numeric">
-            <span class="hint">بین ۱۰ تا ۵۰۰</span>
+            <input type="number" id="limit" value="50" min="1" max="1000" inputmode="numeric">
+            <span class="hint">بین ۱ تا ۱۰۰۰</span>
         </div>
 
         <div class="actions">
@@ -735,7 +729,7 @@ async function fetchMarketData() {
 
     if (!symbol) { showToast('نماد را وارد کنید.', 'error'); $('symbol').focus(); return; }
     if (isNaN(limit)) limit = 50;
-    limit = Math.min(Math.max(limit, 10), 500);
+    limit = Math.min(Math.max(limit, 1), 1000);
     $('limit').value = limit;
 
     btn.disabled = true;
