@@ -101,7 +101,6 @@
 فایل‌های پروژه را در یک پوشه قرار دهید. حداقل فایل‌های موردنیاز عبارت‌اند از:
 
 ```text
-Nabz-e-Bazaar/
 ├── main_app.py
 ├── requirements.txt
 └── README.md
