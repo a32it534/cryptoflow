@@ -581,10 +581,9 @@ td.t-up { color: var(--up); font-weight: 600; } td.t-down { color: var(--down); 
 
         <div class="field">
             <label for="limit">تعداد کندل</label>
-            <input type="number" id="limit" value="50" min="1" max="1000" inputmode="numeric">
-            <span class="hint">بین ۱ تا ۱۰۰۰</span>
+            <input type="number" id="limit" value="100" min="100" max="1000" inputmode="numeric">
+            <span class="hint">برای درستی داده و تحلیل داده ها از کندل های زیاد استفاده کنید حداقل 100 و حداکثر 1000 استفاده کنید </span>
         </div>
-
         <div class="actions">
             <button id="fetchBtn" class="btn btn-primary" type="button">دریافت داده</button>
             <button id="exportBtn" class="btn" type="button" disabled>ذخیره در اکسل</button>
